@@ -8,7 +8,7 @@ const Product = ({product, handleAddToCart}) => {
     const { name, img, seller, price, ratings } = product;
     return (
         <div className='product'>
-            <img src={img} alt=""></img>
+            <img src={img} onError={(e)=>e.target.setAttribute('src','https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-page-not-found-error-with-glitch-effect-on-screen-vector-illustration-for-your-design-.jpg')} alt=""></img>
             <div className='product-info'>
                 <p className='product-name'>
                     {name}</p>
