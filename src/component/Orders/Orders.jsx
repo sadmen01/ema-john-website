@@ -5,7 +5,7 @@ import Cart from '../Cart/Cart';
 import ReviewItems from '../ReviewItems/ReviewItems';
 
 const Orders = () => {
-const {products,initialCart} = useLoaderData();
+const {initialCart} = useLoaderData();
 const [cart, setCart] = useState(initialCart)
 
 const handelRemoveItem = (id) =>{
@@ -33,7 +33,11 @@ const clearCart = () =>{
             }
         </div>
         <div className='cart-container'>
-            <Cart clearCart ={clearCart} cart={cart}></Cart>
+            <Cart clearCart ={clearCart} cart={cart}>
+            <Link to='/shipping'>
+                        <button>Proceed Shipping</button>
+                    </Link>
+            </Cart>
         </div>
         </div>
     );
